@@ -1,8 +1,7 @@
 ---
 - name: Ensure Apache is installed on Debian.
   apt:
-    - name: {{ apache_packages }}
-    - state: {{ apache_packages_state }}
-    - update_cache: true
-    - cache_valid_time: 600
-
+    - name: "{{ apache_packages }}"
+      state: "{{ apache_packages_state }}"
+      update_cache: true
+      cache_valid_time: 600
